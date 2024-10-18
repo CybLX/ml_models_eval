@@ -1,0 +1,619 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{geometry}%
+\geometry{head=2.0cm,left=0.5cm,right=0.5cm,bottom=2.5cm}%
+\usepackage{fancyhdr}%
+\usepackage{ragged2e}%
+\usepackage{longtable}%
+\usepackage{tabu}%
+\usepackage{graphicx}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+\fancypagestyle{firstpage}{%
+\renewcommand{\headrulewidth}{0pt}%
+\renewcommand{\footrulewidth}{0pt}%
+\fancyhead{%
+}%
+\fancyfoot{%
+}%
+\fancyhead[C]{%
+\begin{Large}%
+\textbf{Logistic\_Regression}%
+\end{Large}%
+\linebreak%
+\begin{large}%
+\textit{\today}%
+\end{large}%
+}%
+\begin{minipage}[c]{0.95\textwidth}%
+\begin{minipage}{0.45\textwidth}%
+\begin{longtable}[c]{|l | l|}%
+\hline%
+\textbf{Score: }&68.16\%\\%
+\hline%
+\textbf{Execution Time: }&10.107s\\%
+\hline%
+\textbf{BigData Fraction: }&5.0\%\\%
+\hline%
+\textbf{Cohen's kappa: }&45.86\%\\%
+\hline%
+\textbf{Roc AUC: }&0.842\\%
+\hline%
+\textbf{Analyser: }&word\\%
+\hline%
+\textbf{Analyser: }&tfidf\\%
+\hline%
+\textbf{Train Proprotion: }&5.0\%\\%
+\hline%
+\textbf{Ngrans: }&{[}1, 2{]}\\%
+\hline%
+\textbf{FreqThreshold: }&0\\%
+\hline%
+\textbf{StopWord: }&True\\%
+\hline%
+\textbf{OutTogether: }&True\\%
+\hline%
+\end{longtable}%
+\end{minipage}%
+\begin{minipage}{0.55\textwidth}%
+\begin{tabu}[b]{X[r] | X[r] X[r] X[r] X[r]}%
+\hline%
+\textbf{   }&\textbf{precision}&\textbf{recall}&\textbf{f1{-}score}&\textbf{support}\\%
+\hline%
+Negative&0.628&0.752&0.684&36049.0\\%
+Neutral&0.305&0.483&0.374&15285.0\\%
+Positive&0.856&0.688&0.763&81757.0\\%
+&&&&\\%
+Accuracy&&&0.682&133091.0\\%
+Macro avg&0.596&0.641&0.607&133091.0\\%
+Weighted avg&0.731&0.682&0.697&133091.0\\%
+\end{tabu}%
+\end{minipage}%
+\end{minipage}%
+\linebreak%
+\begin{minipage}{0.7\textwidth}%
+\begin{minipage}{0.8\textwidth}%
+\includegraphics[width=360px]{./report/Learning/Logistic_Regression/confusion-matrix.png}%
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}%
+\begin{tabu}[t]{X[r] | X[r] X[r]}%
+\hline%
+\textbf{Index}&\textbf{F1}&\textbf{AUC}\\%
+\hline%
+negative&0.684&0.743\\%
+neutral&0.374&0.307\\%
+positive&0.763&0.892\\%
+\end{tabu}%
+\end{minipage}%
+\end{minipage}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=350px]{./report/Learning/Logistic_Regression/True-Positive-Rate.png}%
+\caption{Roc\_auc\_curve}%
+\end{figure}
+
+%
+\newpage%
+\raggedright%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=365px]{./report/Learning/Logistic_Regression/Recall-Precision.png}%
+\caption{Precision\_recall\_curve}%
+\end{figure}
+
+%
+}%
+\pagestyle{firstpage}%
+\newpage%
+\fancypagestyle{firstpage}{%
+\renewcommand{\headrulewidth}{0pt}%
+\renewcommand{\footrulewidth}{0pt}%
+\fancyhead{%
+}%
+\fancyfoot{%
+}%
+\fancyhead[C]{%
+\begin{Large}%
+\textbf{Svm\_Svc}%
+\end{Large}%
+\linebreak%
+\begin{large}%
+\textit{\today}%
+\end{large}%
+}%
+\begin{minipage}[c]{0.95\textwidth}%
+\begin{minipage}{0.45\textwidth}%
+\begin{longtable}[c]{|l | l|}%
+\hline%
+\textbf{Score: }&72.36\%\\%
+\hline%
+\textbf{Execution Time: }&949.536s\\%
+\hline%
+\textbf{BigData Fraction: }&5.0\%\\%
+\hline%
+\textbf{Cohen's kappa: }&49.26\%\\%
+\hline%
+\textbf{Roc AUC: }&0.849\\%
+\hline%
+\textbf{Analyser: }&word\\%
+\hline%
+\textbf{Analyser: }&tfidf\\%
+\hline%
+\textbf{Train Proprotion: }&5.0\%\\%
+\hline%
+\textbf{Ngrans: }&{[}1, 2{]}\\%
+\hline%
+\textbf{FreqThreshold: }&0\\%
+\hline%
+\textbf{StopWord: }&True\\%
+\hline%
+\textbf{OutTogether: }&True\\%
+\hline%
+\end{longtable}%
+\end{minipage}%
+\begin{minipage}{0.55\textwidth}%
+\begin{tabu}[b]{X[r] | X[r] X[r] X[r] X[r]}%
+\hline%
+\textbf{   }&\textbf{precision}&\textbf{recall}&\textbf{f1{-}score}&\textbf{support}\\%
+\hline%
+Negative&0.621&0.79&0.695&36049.0\\%
+Neutral&0.4&0.285&0.333&15285.0\\%
+Positive&0.831&0.776&0.803&81757.0\\%
+&&&&\\%
+Accuracy&&&0.724&133091.0\\%
+Macro avg&0.617&0.617&0.61&133091.0\\%
+Weighted avg&0.725&0.724&0.72&133091.0\\%
+\end{tabu}%
+\end{minipage}%
+\end{minipage}%
+\linebreak%
+\begin{minipage}{0.7\textwidth}%
+\begin{minipage}{0.8\textwidth}%
+\includegraphics[width=360px]{./report/Learning/Svm_Svc/confusion-matrix.png}%
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}%
+\begin{tabu}[t]{X[r] | X[r] X[r]}%
+\hline%
+\textbf{Index}&\textbf{F1}&\textbf{AUC}\\%
+\hline%
+negative&0.683&0.749\\%
+neutral&0.199&0.306\\%
+positive&0.822&0.895\\%
+\end{tabu}%
+\end{minipage}%
+\end{minipage}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=350px]{./report/Learning/Svm_Svc/True-Positive-Rate.png}%
+\caption{Roc\_auc\_curve}%
+\end{figure}
+
+%
+\newpage%
+\raggedright%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=365px]{./report/Learning/Svm_Svc/Recall-Precision.png}%
+\caption{Precision\_recall\_curve}%
+\end{figure}
+
+%
+}%
+\pagestyle{firstpage}%
+\newpage%
+\fancypagestyle{firstpage}{%
+\renewcommand{\headrulewidth}{0pt}%
+\renewcommand{\footrulewidth}{0pt}%
+\fancyhead{%
+}%
+\fancyfoot{%
+}%
+\fancyhead[C]{%
+\begin{Large}%
+\textbf{Kneighbors\_Classifier}%
+\end{Large}%
+\linebreak%
+\begin{large}%
+\textit{\today}%
+\end{large}%
+}%
+\begin{minipage}[c]{0.95\textwidth}%
+\begin{minipage}{0.45\textwidth}%
+\begin{longtable}[c]{|l | l|}%
+\hline%
+\textbf{Score: }&64.32\%\\%
+\hline%
+\textbf{Execution Time: }&0.002s\\%
+\hline%
+\textbf{BigData Fraction: }&5.0\%\\%
+\hline%
+\textbf{Cohen's kappa: }&11.37\%\\%
+\hline%
+\textbf{Roc AUC: }&0.795\\%
+\hline%
+\textbf{Analyser: }&word\\%
+\hline%
+\textbf{Analyser: }&tfidf\\%
+\hline%
+\textbf{Train Proprotion: }&5.0\%\\%
+\hline%
+\textbf{Ngrans: }&{[}1, 2{]}\\%
+\hline%
+\textbf{FreqThreshold: }&0\\%
+\hline%
+\textbf{StopWord: }&True\\%
+\hline%
+\textbf{OutTogether: }&True\\%
+\hline%
+\end{longtable}%
+\end{minipage}%
+\begin{minipage}{0.55\textwidth}%
+\begin{tabu}[b]{X[r] | X[r] X[r] X[r] X[r]}%
+\hline%
+\textbf{   }&\textbf{precision}&\textbf{recall}&\textbf{f1{-}score}&\textbf{support}\\%
+\hline%
+Negative&0.815&0.128&0.221&36049.0\\%
+Neutral&0.423&0.017&0.032&15285.0\\%
+Positive&0.637&0.988&0.774&81757.0\\%
+&&&&\\%
+Accuracy&&&0.643&133091.0\\%
+Macro avg&0.625&0.377&0.342&133091.0\\%
+Weighted avg&0.661&0.643&0.539&133091.0\\%
+\end{tabu}%
+\end{minipage}%
+\end{minipage}%
+\linebreak%
+\begin{minipage}{0.7\textwidth}%
+\begin{minipage}{0.8\textwidth}%
+\includegraphics[width=360px]{./report/Learning/Kneighbors_Classifier/confusion-matrix.png}%
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}%
+\begin{tabu}[t]{X[r] | X[r] X[r]}%
+\hline%
+\textbf{Index}&\textbf{F1}&\textbf{AUC}\\%
+\hline%
+negative&0.221&0.664\\%
+neutral&0.032&0.238\\%
+positive&0.774&0.859\\%
+\end{tabu}%
+\end{minipage}%
+\end{minipage}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=350px]{./report/Learning/Kneighbors_Classifier/True-Positive-Rate.png}%
+\caption{Roc\_auc\_curve}%
+\end{figure}
+
+%
+\newpage%
+\raggedright%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=365px]{./report/Learning/Kneighbors_Classifier/Recall-Precision.png}%
+\caption{Precision\_recall\_curve}%
+\end{figure}
+
+%
+}%
+\pagestyle{firstpage}%
+\newpage%
+\fancypagestyle{firstpage}{%
+\renewcommand{\headrulewidth}{0pt}%
+\renewcommand{\footrulewidth}{0pt}%
+\fancyhead{%
+}%
+\fancyfoot{%
+}%
+\fancyhead[C]{%
+\begin{Large}%
+\textbf{Random\_Forest}%
+\end{Large}%
+\linebreak%
+\begin{large}%
+\textit{\today}%
+\end{large}%
+}%
+\begin{minipage}[c]{0.95\textwidth}%
+\begin{minipage}{0.45\textwidth}%
+\begin{longtable}[c]{|l | l|}%
+\hline%
+\textbf{Score: }&73.27\%\\%
+\hline%
+\textbf{Execution Time: }&202.786s\\%
+\hline%
+\textbf{BigData Fraction: }&5.0\%\\%
+\hline%
+\textbf{Cohen's kappa: }&44.72\%\\%
+\hline%
+\textbf{Roc AUC: }&0.82\\%
+\hline%
+\textbf{Analyser: }&word\\%
+\hline%
+\textbf{Analyser: }&tfidf\\%
+\hline%
+\textbf{Train Proprotion: }&5.0\%\\%
+\hline%
+\textbf{Ngrans: }&{[}1, 2{]}\\%
+\hline%
+\textbf{FreqThreshold: }&0\\%
+\hline%
+\textbf{StopWord: }&True\\%
+\hline%
+\textbf{OutTogether: }&True\\%
+\hline%
+\end{longtable}%
+\end{minipage}%
+\begin{minipage}{0.55\textwidth}%
+\begin{tabu}[b]{X[r] | X[r] X[r] X[r] X[r]}%
+\hline%
+\textbf{   }&\textbf{precision}&\textbf{recall}&\textbf{f1{-}score}&\textbf{support}\\%
+\hline%
+Negative&0.686&0.643&0.664&36049.0\\%
+Neutral&0.581&0.109&0.183&15285.0\\%
+Positive&0.753&0.889&0.816&81757.0\\%
+&&&&\\%
+Accuracy&&&0.733&133091.0\\%
+Macro avg&0.674&0.547&0.554&133091.0\\%
+Weighted avg&0.715&0.733&0.702&133091.0\\%
+\end{tabu}%
+\end{minipage}%
+\end{minipage}%
+\linebreak%
+\begin{minipage}{0.7\textwidth}%
+\begin{minipage}{0.8\textwidth}%
+\includegraphics[width=360px]{./report/Learning/Random_Forest/confusion-matrix.png}%
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}%
+\begin{tabu}[t]{X[r] | X[r] X[r]}%
+\hline%
+\textbf{Index}&\textbf{F1}&\textbf{AUC}\\%
+\hline%
+negative&0.664&0.723\\%
+neutral&0.183&0.307\\%
+positive&0.816&0.854\\%
+\end{tabu}%
+\end{minipage}%
+\end{minipage}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=350px]{./report/Learning/Random_Forest/True-Positive-Rate.png}%
+\caption{Roc\_auc\_curve}%
+\end{figure}
+
+%
+\newpage%
+\raggedright%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=365px]{./report/Learning/Random_Forest/Recall-Precision.png}%
+\caption{Precision\_recall\_curve}%
+\end{figure}
+
+%
+}%
+\pagestyle{firstpage}%
+\newpage%
+\fancypagestyle{firstpage}{%
+\renewcommand{\headrulewidth}{0pt}%
+\renewcommand{\footrulewidth}{0pt}%
+\fancyhead{%
+}%
+\fancyfoot{%
+}%
+\fancyhead[C]{%
+\begin{Large}%
+\textbf{SGD\_Classifier}%
+\end{Large}%
+\linebreak%
+\begin{large}%
+\textit{\today}%
+\end{large}%
+}%
+\begin{minipage}[c]{0.95\textwidth}%
+\begin{minipage}{0.45\textwidth}%
+\begin{longtable}[c]{|l | l|}%
+\hline%
+\textbf{Score: }&71.94\%\\%
+\hline%
+\textbf{Execution Time: }&3.306s\\%
+\hline%
+\textbf{BigData Fraction: }&5.0\%\\%
+\hline%
+\textbf{Cohen's kappa: }&47.48\%\\%
+\hline%
+\textbf{Roc AUC: }&0.835\\%
+\hline%
+\textbf{Analyser: }&word\\%
+\hline%
+\textbf{Analyser: }&tfidf\\%
+\hline%
+\textbf{Train Proprotion: }&5.0\%\\%
+\hline%
+\textbf{Ngrans: }&{[}1, 2{]}\\%
+\hline%
+\textbf{FreqThreshold: }&0\\%
+\hline%
+\textbf{StopWord: }&True\\%
+\hline%
+\textbf{OutTogether: }&True\\%
+\hline%
+\end{longtable}%
+\end{minipage}%
+\begin{minipage}{0.55\textwidth}%
+\begin{tabu}[b]{X[r] | X[r] X[r] X[r] X[r]}%
+\hline%
+\textbf{   }&\textbf{precision}&\textbf{recall}&\textbf{f1{-}score}&\textbf{support}\\%
+\hline%
+Negative&0.654&0.705&0.678&36049.0\\%
+Neutral&0.358&0.302&0.327&15285.0\\%
+Positive&0.808&0.804&0.806&81757.0\\%
+&&&&\\%
+Accuracy&&&0.719&133091.0\\%
+Macro avg&0.607&0.603&0.604&133091.0\\%
+Weighted avg&0.714&0.719&0.716&133091.0\\%
+\end{tabu}%
+\end{minipage}%
+\end{minipage}%
+\linebreak%
+\begin{minipage}{0.7\textwidth}%
+\begin{minipage}{0.8\textwidth}%
+\includegraphics[width=360px]{./report/Learning/SGD_Classifier/confusion-matrix.png}%
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}%
+\begin{tabu}[t]{X[r] | X[r] X[r]}%
+\hline%
+\textbf{Index}&\textbf{F1}&\textbf{AUC}\\%
+\hline%
+negative&0.678&0.738\\%
+neutral&0.327&0.294\\%
+positive&0.806&0.887\\%
+\end{tabu}%
+\end{minipage}%
+\end{minipage}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=350px]{./report/Learning/SGD_Classifier/True-Positive-Rate.png}%
+\caption{Roc\_auc\_curve}%
+\end{figure}
+
+%
+\newpage%
+\raggedright%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=365px]{./report/Learning/SGD_Classifier/Recall-Precision.png}%
+\caption{Precision\_recall\_curve}%
+\end{figure}
+
+%
+}%
+\pagestyle{firstpage}%
+\newpage%
+\fancypagestyle{firstpage}{%
+\renewcommand{\headrulewidth}{0pt}%
+\renewcommand{\footrulewidth}{0pt}%
+\fancyhead{%
+}%
+\fancyfoot{%
+}%
+\fancyhead[C]{%
+\begin{Large}%
+\textbf{Gradient\_Boosting}%
+\end{Large}%
+\linebreak%
+\begin{large}%
+\textit{\today}%
+\end{large}%
+}%
+\begin{minipage}[c]{0.95\textwidth}%
+\begin{minipage}{0.45\textwidth}%
+\begin{longtable}[c]{|l | l|}%
+\hline%
+\textbf{Score: }&69.86\%\\%
+\hline%
+\textbf{Execution Time: }&112.746s\\%
+\hline%
+\textbf{BigData Fraction: }&5.0\%\\%
+\hline%
+\textbf{Cohen's kappa: }&33.52\%\\%
+\hline%
+\textbf{Roc AUC: }&0.803\\%
+\hline%
+\textbf{Analyser: }&word\\%
+\hline%
+\textbf{Analyser: }&tfidf\\%
+\hline%
+\textbf{Train Proprotion: }&5.0\%\\%
+\hline%
+\textbf{Ngrans: }&{[}1, 2{]}\\%
+\hline%
+\textbf{FreqThreshold: }&0\\%
+\hline%
+\textbf{StopWord: }&True\\%
+\hline%
+\textbf{OutTogether: }&True\\%
+\hline%
+\end{longtable}%
+\end{minipage}%
+\begin{minipage}{0.55\textwidth}%
+\begin{tabu}[b]{X[r] | X[r] X[r] X[r] X[r]}%
+\hline%
+\textbf{   }&\textbf{precision}&\textbf{recall}&\textbf{f1{-}score}&\textbf{support}\\%
+\hline%
+Negative&0.672&0.457&0.544&36049.0\\%
+Neutral&0.667&0.052&0.096&15285.0\\%
+Positive&0.705&0.926&0.801&81757.0\\%
+&&&&\\%
+Accuracy&&&0.699&133091.0\\%
+Macro avg&0.681&0.478&0.48&133091.0\\%
+Weighted avg&0.692&0.699&0.65&133091.0\\%
+\end{tabu}%
+\end{minipage}%
+\end{minipage}%
+\linebreak%
+\begin{minipage}{0.7\textwidth}%
+\begin{minipage}{0.8\textwidth}%
+\includegraphics[width=360px]{./report/Learning/Gradient_Boosting/confusion-matrix.png}%
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}%
+\begin{tabu}[t]{X[r] | X[r] X[r]}%
+\hline%
+\textbf{Index}&\textbf{F1}&\textbf{AUC}\\%
+\hline%
+negative&0.544&0.669\\%
+neutral&0.096&0.306\\%
+positive&0.801&0.862\\%
+\end{tabu}%
+\end{minipage}%
+\end{minipage}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=350px]{./report/Learning/Gradient_Boosting/True-Positive-Rate.png}%
+\caption{Roc\_auc\_curve}%
+\end{figure}
+
+%
+\newpage%
+\raggedright%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=365px]{./report/Learning/Gradient_Boosting/Recall-Precision.png}%
+\caption{Precision\_recall\_curve}%
+\end{figure}
+
+%
+}%
+\pagestyle{firstpage}%
+\newpage%
+\end{document}
