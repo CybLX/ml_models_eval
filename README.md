@@ -60,7 +60,7 @@ The primary goal of this project is to:
 
 ## How to Use
 1. **Clone the Repository**:
-   `git clone https://github.com/cyblx/ml_models_eval`
+   `git clone https://github.com/cyblx/nlp_model_benchmarking`
 
 2. **Install Dependencies**:
    Run `pip install -r requirements.txt` to install the necessary libraries.
